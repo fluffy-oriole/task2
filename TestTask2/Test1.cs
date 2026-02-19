@@ -8,7 +8,7 @@ namespace TestTask2
         [TestMethod]
         public void NoSubsequence()
         {
-            int[] sequence = new int[] { 1, 2, 3, 4, 5 };
+            List<int> sequence = new List<int> { 1, 2, 3, 4, 5 };
             int answer = Logic.FindSequenceNumber(sequence, 5, 5);
             Assert.AreEqual(-1, answer);
         }
@@ -16,7 +16,7 @@ namespace TestTask2
         [TestMethod]
         public void NormalSubsequence()
         {
-            int[] sequence = new int[] { 1, 2, 2, 2, 3 };
+            List<int> sequence = new List<int> { 1, 2, 2, 2, 3 };
             int answer = Logic.FindSequenceNumber(sequence, 5, 3);
             Assert.AreEqual(1, answer);
         }
@@ -24,7 +24,7 @@ namespace TestTask2
         [TestMethod]
         public void EmptySequence()
         {
-            int[] sequence = new int[] { };
+            List<int> sequence = new List<int> { };
             int answer = Logic.FindSequenceNumber(sequence, 0, 3);
             Assert.AreEqual(-1, answer);
         }
@@ -32,7 +32,7 @@ namespace TestTask2
         [TestMethod]
         public void EmptySubsequenceLength()
         {
-            int[] sequence = new int[] { 1, 2, 2, 2, 3 };
+            List<int> sequence = new List<int> { 1, 2, 2, 2, 3 };
             int answer = Logic.FindSequenceNumber(sequence, 5, 0);
             Assert.AreEqual(-1, answer);
         }
@@ -40,7 +40,7 @@ namespace TestTask2
         [TestMethod]
         public void SubsequenceAtTheEnd()
         {
-            int[] sequence = new int[] { 1, 2, 3, 4, 4 };
+            List<int> sequence = new List<int> { 1, 2, 3, 4, 4 };
             int answer = Logic.FindSequenceNumber(sequence, 3, 2);
             Assert.AreEqual(-1, answer);
         }
@@ -48,7 +48,7 @@ namespace TestTask2
         [TestMethod]
         public void MoreThanOneSecuence()
         {
-            int[] sequence = new int[] { 1, 2, 2, 3, 4, 4 };
+            List<int> sequence = new List<int> { 1, 2, 2, 3, 4, 4 };
             int answer = Logic.FindSequenceNumber(sequence, 6, 2);
             Assert.AreEqual(1, answer);
         }
